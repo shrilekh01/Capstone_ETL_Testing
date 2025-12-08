@@ -1,0 +1,28 @@
+2025-11-26 14:29:17,992-INFO-Collected 2 test items
+2025-11-26 14:29:17,994-INFO-Starting test: TestData/test_data_extraction.py::TestDataExtraction::test_DE_from_sales_data_between_source_and_staging
+2025-11-26 14:29:17,995-INFO-MySQL database connection is being established...
+2025-11-26 14:29:18,027-ERROR-Failed to establish MySQL database connection: Not an executable object: 'SELECT 1'
+Traceback (most recent call last):
+  File "C:\Users\shril\AppData\Roaming\Python\Python313\site-packages\sqlalchemy\engine\base.py", line 1415, in execute
+    meth = statement._execute_on_connection
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_execute_on_connection'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\capstone\Capstone_Test_Automation\conftest.py", line 70, in connect_to_mysql_database
+    conn.execute("SELECT 1")
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\shril\AppData\Roaming\Python\Python313\site-packages\sqlalchemy\engine\base.py", line 1417, in execute
+    raise exc.ObjectNotExecutableError(statement) from err
+sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'SELECT 1'
+2025-11-26 14:29:18,065-INFO-MySQL database connection has been closed.
+2025-11-26 14:29:18,515-INFO-Finished test: TestData/test_data_extraction.py::TestDataExtraction::test_DE_from_sales_data_between_source_and_staging
+2025-11-26 14:29:18,517-INFO-Starting test: TestData/test_data_extraction.py::TestDataExtraction::test_DE_from_product_data_between_source_and_staging
+2025-11-26 14:29:18,645-INFO-Finished test: TestData/test_data_extraction.py::TestDataExtraction::test_DE_from_product_data_between_source_and_staging
+2025-11-26 14:29:18,650-INFO-================================================================================
+2025-11-26 14:29:18,650-INFO-PYTEST TEST SUITE FINISHED
+2025-11-26 14:29:18,650-INFO-Exit Status: 1
+2025-11-26 14:29:18,650-INFO-Total Tests Run: 2
+2025-11-26 14:29:18,650-INFO-================================================================================
