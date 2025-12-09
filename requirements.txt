@@ -6,4 +6,4 @@ sqlalchemy
 pandas
 paramiko
 lxml
-oracledb
+python-oracledb
