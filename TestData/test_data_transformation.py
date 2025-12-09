@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-import oracledb as cx_Oracle
+import oracledb
 import paramiko
 import pytest
 from CommonUtilities.utilities import *
