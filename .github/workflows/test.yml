@@ -42,7 +42,7 @@ jobs:
 
     - name: Upload Smoke Test Reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: smoke-test-reports
         path: |
@@ -82,7 +82,7 @@ jobs:
 
     - name: Upload Regression Test Reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: regression-test-reports
         path: |
@@ -121,7 +121,7 @@ jobs:
 
     - name: Upload Data Quality Test Reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: dq-test-reports
         path: |
