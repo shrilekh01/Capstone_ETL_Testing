@@ -47,7 +47,8 @@ class DataExtraction:
             util = CommonUtilities()
             util.sales_data_from_linux_server()
 
-            df = pd.read_csv("SourceSystem/sales_data_linux.csv")
+            
+            df = pd.read_csv("TestData/sales_data_linux.csv")  
             df.to_sql("staging_sales", mysql_engine, index=False, if_exists="replace")
 
             logger.info("Sales data extraction completed successfully.")
@@ -124,3 +125,4 @@ if __name__ == "__main__":
     de.extract_stores_data_and_load_stage()
 
     print("success")
+
