@@ -8,7 +8,7 @@ ORACLE_SERVICE = "FREEPDB1"
 # mysql database
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "sunbeam"
-MYSQL_HOST = "localhost"
+MYSQL_HOST = "127.0.0.1"
 MYSQL_PORT = 3306
 MYSQL_DATABASE = "retaildwh"
 
@@ -25,3 +25,4 @@ POSTGRES_PASSWORD = "capstone"
 POSTGRES_HOST = "capstone2.cra4maemeqqs.ap-south-1.rds.amazonaws.com"
 POSTGRES_PORT = 5432
 POSTGRES_DB = "capstone_src"
+
