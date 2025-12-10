@@ -6,12 +6,12 @@ ORACLE_PORT = 1521
 ORACLE_SERVICE = "FREEPDB1"
 
 # mysql database
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "sunbeam"
-MYSQL_HOST = "127.0.0.1"
-MYSQL_PORT = 3306
-MYSQL_DATABASE = "retaildwh"
-
+# mysql database
+MYSQL_USER = os.getenv("MYSQL_USER", "root")  # Default to 'root' if env var not set
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "sunbeam")
+MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")  # Can be overridden in CI
+MYSQL_PORT = int(os.getenv("MYSQL_PORT", "3306"))
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "retaildwh")
 # Linux server
 hostname = "192.168.56.103"
 username = "root"
@@ -25,4 +25,5 @@ POSTGRES_PASSWORD = "capstone"
 POSTGRES_HOST = "capstone2.cra4maemeqqs.ap-south-1.rds.amazonaws.com"
 POSTGRES_PORT = 5432
 POSTGRES_DB = "capstone_src"
+
 
